@@ -1,7 +1,7 @@
 ---
-app: radarr
+app: chia-gigahorse-cudaplotter
 base: true
-semantic_versioning: true
+semantic_versioning: false
 channels:
   - name: master
     platforms: ["linux/amd64"]
