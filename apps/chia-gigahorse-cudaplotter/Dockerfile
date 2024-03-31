@@ -18,4 +18,4 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
 CMD ["sleep", "infinity"]
 
-COPY cuda_plot_k32_v3 .
+COPY ./apps/chia-gigahorse-cudaplotter/cuda_plot_k32_v3 .
