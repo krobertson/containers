@@ -1,0 +1,10 @@
+---
+app: radarr
+base: true
+semantic_versioning: true
+channels:
+  - name: master
+    platforms: ["linux/amd64"]
+    stable: true
+    tests:
+      enabled: false
