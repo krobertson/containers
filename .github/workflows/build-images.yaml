@@ -170,6 +170,7 @@ jobs:
           platforms: ${{ matrix.image.platform }}
           file: ${{ matrix.image.dockerfile }}
           outputs: ${{ steps.prepare-build-outputs.outputs.outputs }}
+          visibility: public
           cache-from: type=gha
           cache-to: type=gha,mode=max
           labels: |-
