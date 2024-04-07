@@ -6,7 +6,7 @@ ARG CHANNEL
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
-	vim-tiny python3-parted udev xfsprogs python3-yaml \
+	python3-parted udev xfsprogs python3-yaml \
 	&& rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
