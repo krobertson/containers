@@ -1,0 +1,10 @@
+---
+app: partsetup
+base: true
+semantic_versioning: false
+channels:
+  - name: master
+    platforms: ["linux/amd64"]
+    stable: true
+    tests:
+      enabled: false
