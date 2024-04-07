@@ -4,7 +4,9 @@ ARG TARGETPLATFORM
 ARG VERSION
 ARG CHANNEL
 
-RUN add-apt-repository ppa:rmescandon/yq \
+RUN apt-get update \
+	&& apt-get install -y software-properties-common  \
+	&& add-apt-repository ppa:rmescandon/yq \
 	&& apt-get update \
 	&& apt-get install -y wget yq \
 	&& rm -rf /var/lib/apt/lists/*
