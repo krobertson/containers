@@ -5,7 +5,7 @@ ARG VERSION
 ARG CHANNEL
 
 RUN apt-get update \
-	&& apt-get install -y wget \
+	&& apt-get install -y wget yq \
 	&& rm -rf /var/lib/apt/lists/*
 
 CMD ["nvidia_gpu_exporter"]
