@@ -12,6 +12,7 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/*
 
 CMD ["nvidia_gpu_exporter"]
+COPY ./apps/nvidia-gpu-exporter/setpowerlimit.py /
 
 RUN wget https://github.com/utkuozdemir/nvidia_gpu_exporter/releases/download/v${VERSION}/nvidia_gpu_exporter_${VERSION}_linux_x86_64.tar.gz \
  	&& tar -xvzf nvidia_gpu_exporter_${VERSION}_linux_x86_64.tar.gz \
