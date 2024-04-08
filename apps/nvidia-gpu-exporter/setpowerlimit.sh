@@ -12,5 +12,3 @@ do
     pl=limits_$i
     nvidia-smi -i $i -pl ${!pl}
 done
-
-sleep infinity
