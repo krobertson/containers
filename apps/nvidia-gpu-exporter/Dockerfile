@@ -9,7 +9,7 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN wget -O /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.43.1/yq_linux_amd64 \
-	&& chmode a+x /usr/bin/yq
+	&& chmod a+x /usr/bin/yq
 
 CMD ["nvidia_gpu_exporter"]
 COPY ./apps/nvidia-gpu-exporter/setpowerlimit.sh .
