@@ -5,11 +5,11 @@ ARG VERSION
 ARG CHANNEL
 
 RUN apt-get update \
-	&& apt-get install -y software-properties-common  \
-	&& add-apt-repository ppa:rmescandon/yq \
-	&& apt-get update \
-	&& apt-get install -y wget yq \
+	&& apt-get install -y wget \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN wget -O /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.43.1/yq_linux_amd64 \
+	&& chmode a+x /usr/bin/yq
 
 CMD ["nvidia_gpu_exporter"]
 COPY ./apps/nvidia-gpu-exporter/setpowerlimit.sh .
