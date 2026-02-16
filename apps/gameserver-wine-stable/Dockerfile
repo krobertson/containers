@@ -21,7 +21,7 @@ RUN   apt-get update; \
       apt-get clean; \
       rm -rf /var/lib/apt/lists/*;
 
-ADD   --chmod=0755 setupwinetricks.sh /usr/local/bin
+ADD   --chmod=0755 ./apps/gameserver-wine-stable/setupwinetricks.sh /usr/local/bin
 
 ENV  XDG_RUNTIME_DIR="/tmp" \
      WINEPREFIX="/games/.wine" \
